@@ -1,5 +1,128 @@
 pen (0.27.2-1) unstable; urgency=low
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Upstream release pen 0.27.2
 
- -- vinz <vinz@sorcery>  Wed, 25 Mar 2015 10:22:28 +0100
+ -- vnz <vincent.leraitre@teads.tv>  Wed, 25 Mar 2015 11:11:18 +0100
+
+pen (0.25.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Vincent Bernat <bernat@debian.org>  Sun, 28 Sep 2014 10:16:28 +0200
+
+pen (0.22.1-1) unstable; urgency=medium
+
+  * New upstream release.
+     + No more hard-coded path for statistics.
+     + Control socket can now be an Unix socket. Moreover, pen will be
+       reluctant to use it as root. This is documented in the manpage. The
+       user is therefore expected to know what he is doing when using this
+       feature.
+  * Don't ship the CGI script, even as an example. It is outdated and
+    insecure.
+  * The three above items fix CVE-2014-237. Closes: #741370.
+  * Update manpage patch.
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 05 Apr 2014 13:54:24 +0200
+
+pen (0.21.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update debian/watch to use HTTP instead of FTP.
+  * Enable GeoIP support.
+  * No need to remove pentest executable anymore.
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 22 Feb 2014 12:46:54 +0100
+
+pen (0.20.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update debian/copyright to specify new OpenSSL exception to GPL.
+  * Enable SSL support as we can now link against OpenSSL. Closes: #454753.
+  * Don't ship `pentest`.
+
+ -- Vincent Bernat <bernat@debian.org>  Tue, 21 Jan 2014 23:12:55 +0100
+
+pen (0.20.1-1) unstable; urgency=low
+
+  * New upstream version.
+  * Bump Standards-Version.
+  * Update Vcs-* fields.
+  * Update debian/copyright.
+  * Update to 3.0 (quilt) format.
+  * Use new "override" style for debhelper in debian/rules.
+  * Use autotools-dev to update config.*.
+  * Use debhelper 9 to get automatic hardening.
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 18 Jan 2014 15:06:59 +0100
+
+pen (0.18.0-1) unstable; urgency=low
+
+  * New Upstream Version
+  * Drop patch about penctl.cgi since it has been applied upstream
+
+ -- Vincent Bernat <bernat@debian.org>  Sun, 18 May 2008 08:32:58 +0200
+
+pen (0.17.3-2) unstable; urgency=low
+
+  * Fix Gürkan email address
+  * Add a patch to fix some issues in penctl.cgi and ship it in
+    /usr/share/doc. Thanks to Reinhold Trocker for providing the patch
+    (Closes: #432565)
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 17 May 2008 09:47:56 +0200
+
+pen (0.17.3-1) unstable; urgency=low
+
+  * New Upstream Version
+  * Adopt the package (Closes: #474577)
+  * Acknowledge NMU, thanks to Gürkan Sengün (Closes: #364807)
+  * debian/control:
+    + Adding Gürkan as an uploader
+    + Bump Standards-Version to 3.7.3
+    + Switch to debhelper 7
+    + Add Homepage field
+    + Add Vcs-* fields
+  * Clean up debian/rules
+  * Remove /usr/sbin from debian/dirs
+  * Remove ChangeLog from debian/docs (added automatically by
+    dh_installchangelogs)
+  * Add debian/compat
+  * Add debian/watch
+  * Turn debian/copyright into machine-readable format
+  * Fix manpages
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 10 May 2008 21:43:30 +0200
+
+pen (0.17.1-1) unstable; urgency=low
+
+  * QA upload.
+  * Changed maintainer to Debian QA Group, since Dominik Bittl's address is
+    bouncing.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Mon, 05 May 2008 09:31:11 +0200
+
+pen (0.17.1-0.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * New upstream version available. (Closes: #364807)
+
+ -- Gürkan Sengün <gurkan@linuks.mine.nu>  Mon, 16 Jul 2007 15:11:50 +0200
+
+pen (0.15.0-1) unstable; urgency=low
+
+  * New upstream release (closes: #212317)
+
+ -- Dominik Bittl <umount@blackhat.umount.org>  Fri, 30 Jul 2004 10:25:48 +0200
+
+pen (0.10.1-2) unstable; urgency=low
+
+  * Fixed description (closes: #195127)
+
+ -- Dominik Bittl <db@umount.org>  Mon,  2 Jun 2003 10:55:17 +0200
+
+pen (0.10.1-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Dominik Bittl <db@umount.org>  Wed, 30 Apr 2003 10:56:54 +0200

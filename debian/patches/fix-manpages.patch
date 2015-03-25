@@ -1,0 +1,74 @@
+Subject: Simple fixes to manpages
+Forwarded-Upstream: no
+
+Index: pen/mergelogs.1
+===================================================================
+--- pen.orig/mergelogs.1	2014-04-05 13:58:32.164902512 +0200
++++ pen/mergelogs.1	2014-04-05 13:58:32.160902432 +0200
+@@ -1,7 +1,7 @@
+ .TH MERGELOGS 1 LOCAL
+ 
+ .SH NAME
+-mergelogs
++mergelogs - merge and consolidate web server logs
+ 
+ .SH SYNOPSIS
+ .B mergelogs
+Index: pen/pen.1
+===================================================================
+--- pen.orig/pen.1	2014-04-05 13:58:32.164902512 +0200
++++ pen/pen.1	2014-04-05 13:58:32.160902432 +0200
+@@ -1,11 +1,13 @@
+ .TH PEN 1 LOCAL
+ 
+ .SH NAME
+-pen
++pen - Load balancer for "simple" tcp based protocols
+ 
+ .SH SYNOPSIS
+ .B pen
++.na
+ [-b sec] [-S N] [-c N] [-e host:port] [-t sec] [-x N] [-j dir] [-u user] [-F cfgfile] [-l logfile] [-p file ] [-w file] [-C port|/path/to/socket] [-T sec] [-HWXadfhnrs] [-o option] [-E certfile] [-K keyfile] [-G cacertfile] [-A cacertdir] [-Z] [-R] [-L protocol] [host:]port|/path/to/socket h1[:p1[:maxc1[:hard1[:weight1[:prio1]]]]] [h2[:p2[:maxc2[:hard2[:weight2[:prio2]]]]]] ...
++.ad
+ 
+ .SH EXAMPLE
+ pen 80 www1:8000:10 www2:80:10 www3
+Index: pen/penctl.1
+===================================================================
+--- pen.orig/penctl.1	2014-04-05 13:58:32.164902512 +0200
++++ pen/penctl.1	2014-04-05 13:58:32.160902432 +0200
+@@ -1,7 +1,7 @@
+ .TH PENCTL 1 LOCAL
+ 
+ .SH NAME
+-penctl
++penctl - control a running pen load balancer
+ 
+ .SH SYNOPSIS
+ .B penctl
+Index: pen/penlog.1
+===================================================================
+--- pen.orig/penlog.1	2014-04-05 13:58:32.164902512 +0200
++++ pen/penlog.1	2014-04-05 13:58:32.160902432 +0200
+@@ -1,7 +1,7 @@
+ .TH PENLOG 1 LOCAL
+ 
+ .SH NAME
+-penlog
++penlog - pipe Apache logs to penlogd
+ 
+ .SH SYNOPSIS
+ .B penlog
+Index: pen/penlogd.1
+===================================================================
+--- pen.orig/penlogd.1	2014-04-05 13:58:32.164902512 +0200
++++ pen/penlogd.1	2014-04-05 13:58:32.160902432 +0200
+@@ -1,7 +1,7 @@
+ .TH PENLOGD 1 LOCAL
+ 
+ .SH NAME
+-penlogd
++penlogd - consolidate web server logs
+ 
+ .SH SYNOPSIS
+ .B penlogd
